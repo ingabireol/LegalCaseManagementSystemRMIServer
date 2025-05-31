@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/legalcasemgmtdb</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">Ornella12345!</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    
+    <!-- Entity Mappings -->
+    <mapping class="model.User"/>
+    <mapping class="model.Client"/>
+    <mapping class="model.Attorney"/>
+    <mapping class="model.Case"/>
+    <mapping class="model.Document"/>
+    <mapping class="model.Event"/>
+    <mapping class="model.TimeEntry"/>
+    <mapping class="model.Invoice"/>
+    <mapping class="model.Payment"/>
+  </session-factory>
+</hibernate-configuration>
